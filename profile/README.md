@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../lode-logo.svg" alt="Lode Logo" width="150">
+  <img src="../lode-logo-solid.png" alt="Lode Logo" width="150">
 </p>
 
 <h1 align="center">Lode</h1>
