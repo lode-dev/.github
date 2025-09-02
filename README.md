@@ -87,7 +87,7 @@ Ready to run Lode on your machine?
 1.  **Clone the deployment repository:**
 
     ```bash
-    git clone [https://github.com/lode-dev/lode-deployment.git](https://github.com/lode-dev/lode-deployment.git)
+    git clone https://github.com/lode-dev/lode-deployment.git
     cd lode-deployment
     ```
 
