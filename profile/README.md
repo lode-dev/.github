@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/lode-dev/.github/main/profile/lode-logo-solid.png" alt="Lode Logo" width="150">
+  <img src="https://raw.githubusercontent.com/lode-dev/.github/main/lode-logo-solid.png" alt="Lode Logo" width="150">
 </p>
 
 <h1 align="center">Lode - The AI Log Assistant</h1>
