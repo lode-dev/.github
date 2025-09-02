@@ -97,7 +97,7 @@ This organization contains all the components that make up the Lode platform.
 | 🧠 [**lode-api**](https://github.com/lode-dev/lode-api)                   | The FastAPI backend for ingestion, querying, caching, and AI chat streaming.  |
 | 🎨 [**lode-ui**](https://github.com/lode-dev/lode-ui)                     | The interactive React frontend for viewing logs and chatting with the AI.     |
 | 📦 [**lode-logger**](https://github.com/lode-dev/lode-logger)             | A lightweight Python client library for easy log shipping.                  |
-| ⚙️ [**.github**](https://www.google.com/search?q=https://github.com/lode-dev/.github)                    | Project-wide assets and this README file.                       |
+| ⚙️ [**.github**](#)                    | Project-wide assets and this README file.                       |
 
 -----
 
