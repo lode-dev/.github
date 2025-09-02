@@ -108,7 +108,7 @@ Ready to run Lode on your machine?
 1.  **Clone the deployment repository:**
 
     ```bash
-    git clone [https://github.com/lode-dev/lode-deployment.git](https://github.com/lode-dev/lode-deployment.git)
+    git clone https://github.com/lode-dev/lode-deployment.git
     cd lode-deployment
     ```
 
@@ -126,5 +126,5 @@ Ready to run Lode on your machine?
 
 4.  **You're live\!**
 
-      * **Lode UI:** [http://localhost:5173](https://www.google.com/search?q=http://localhost:5173)
-      * **Lode API Docs:** [http://localhost:8000/docs](https://www.google.com/search?q=http://localhost:8000/docs)
+      * **Lode UI:** [http://localhost:5173](http://localhost:5173)
+      * **Lode API Docs:** [http://localhost:8000/docs](http://localhost:8000/docs)
