@@ -75,10 +75,10 @@ This organization contains all the components that make up the Lode platform.
 
 | Repository                                     | Description                                                                 |
 | ---------------------------------------------- | --------------------------------------------------------------------------- |
-| 🚀 [**lode-deployment**](./lode-deployment)     | The command center. Contains the `docker-compose.yml` to launch the stack.    |
-| 🧠 [**lode-api**](./lode-api)                   | The FastAPI backend for ingestion, querying, aggregations, and WebSockets.  |
-| 🎨 [**lode-ui**](./lode-ui)                     | The interactive React frontend for viewing and analyzing logs.                |
-| 📦 [**lode-logger**](./lode-logger)             | A lightweight Python client library for easy log shipping.                  |
+| 🚀 [**lode-deployment**](https://github.com/lode-dev/lode-deployment)     | The command center. Contains the `docker-compose.yml` to launch the stack.    |
+| 🧠 [**lode-api**](https://github.com/lode-dev/lode-api)                   | The FastAPI backend for ingestion, querying, aggregations, and WebSockets.  |
+| 🎨 [**lode-ui**](https://github.com/lode-dev/lode-ui)                     | The interactive React frontend for viewing and analyzing logs.                |
+| 📦 [**lode-logger**](https://github.com/lode-dev/lode-logger)             | A lightweight Python client library for easy log shipping.                  |
 
 ## 🚀 Getting Started
 
