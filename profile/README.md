@@ -51,40 +51,57 @@
 Lode uses a multi-repository, microservice-oriented architecture. It demonstrates proficiency with both NoSQL and SQL databases, caching layers, and interaction with a local LLM.
 
 ```mermaid
-graph LR
-    subgraph "Developer's Machine"
-        A["Browser (Lode UI)"]
-        B["Your App (Log Source)"]
+graph TB
+    subgraph DEV["👩‍💻 Developer's Machine"]
+        direction TB
+        A["🌐 Browser<br/><small>Lode UI</small>"]
+        B["📦 Your Application<br/><small>Log Source</small>"]
     end
-
-    subgraph "Docker Network (Lode Stack)"
-        C["Lode API (FastAPI)"]
-        D["OpenSearch (Logs)"]
-        E["Postgres (Chat History)"]
-        F["Redis (Cache)"]
-        G["Ollama (LLM)"]
+    
+    subgraph DOCKER["🐳 Docker Network - Lode Stack"]
+        direction TB
+        C["⚡ Lode API<br/><small>FastAPI Server</small>"]
+        
+        subgraph STORES["📊 Data Layer"]
+            direction LR
+            D["🔍 OpenSearch<br/><small>Log Storage & Search</small>"]
+            E["🗄️ PostgreSQL<br/><small>Chat History</small>"]
+            F["⚡ Redis<br/><small>Caching Layer</small>"]
+        end
+        
+        G["🧠 Ollama<br/><small>Local LLM Engine</small>"]
     end
-
-    A -- "UI/Chat Requests" --> C
-    B -- "POST Logs" --> C
-    C -- "WebSocket Stream" --> A
     
-    C -- "Search/Write" --> D
-    D -- "Results" --> C
+    %% Primary data flow connections
+    A -.->|"🔄 UI Requests<br/>WebSocket Stream"| C
+    B -->|"📤 POST /logs<br/>JSON Payload"| C
     
-    C -- "Read/Write History" --> E
-    C -- "Read/Write Cache" --> F
+    %% API to data stores
+    C <-->|"🔍 Query & Index<br/>Log Data"| D
+    C <-->|"💾 Session Management<br/>Chat Persistence"| E
+    C <-->|"⚡ Fast Access<br/>Temp Storage"| F
     
-    C -- "Prompts" --> G
-    G -- "Streaming Tokens" --> C
-
-    style A fill:#E3F2FD,stroke:#0D47A1
-    style B fill:#E8F5E9,stroke:#1B5E20
-    style C fill:#FFF3E0,stroke:#E65100
-    style D fill:#ECEFF1,stroke:#263235
-    style E fill:#D1E7DD,stroke:#0f5132
-    style F fill:#F8D7DA,stroke:#842029
-    style G fill:#D1ECF1,stroke:#0c5460
+    %% LLM integration
+    C <-->|"🤖 AI Prompts<br/>Streaming Response"| G
+    
+    %% Enhanced styling with better colors and typography
+    classDef devMachine fill:#E3F2FD,stroke:#1565C0,stroke-width:3px,color:#0D47A1
+    classDef apiServer fill:#FFF8E1,stroke:#F57C00,stroke-width:3px,color:#E65100
+    classDef dataStore fill:#F3E5F5,stroke:#7B1FA2,stroke-width:2px,color:#4A148C
+    classDef searchEngine fill:#E8F5E9,stroke:#388E3C,stroke-width:2px,color:#1B5E20
+    classDef database fill:#E0F2F1,stroke:#00796B,stroke-width:2px,color:#004D40
+    classDef cache fill:#FFEBEE,stroke:#D32F2F,stroke-width:2px,color:#B71C1C
+    classDef llmEngine fill:#E1F5FE,stroke:#0288D1,stroke-width:3px,color:#01579B
+    classDef containerBox fill:#FAFAFA,stroke:#616161,stroke-width:2px,stroke-dasharray: 5 5
+    
+    %% Apply styles
+    class A,B devMachine
+    class C apiServer
+    class D searchEngine
+    class E database
+    class F cache
+    class G llmEngine
+    class DEV,DOCKER,STORES containerBox
 ```
 
 ## 📚 Repositories
